@@ -1,0 +1,71 @@
+﻿@model CPRG214.OfficeAssets.WebInterface.Models.ViewModel.AssetsViewModel
+@using CPRG214.OfficeAssets.WebInterface.Extensions
+@{ 
+    ViewData["Title"] = "Create";
+}
+
+<br />
+<h2 class="text-info">Create Asset</h2>
+
+<form method="post">
+    <div class="p-4 border rounded">
+        <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+        <div class="form-group row">
+            <div class=" col-2">
+                <label asp-for="Assets.AssetTypes.Name"> </label>
+            </div>
+            <div class="col-5">
+               <select asp-for="@Model.Assets.AssetTypes.Id" asp-items="Model.AssetTypes.ToSelectListItem(Model.Assets.AssetTypeId)" class="form-control"></select>
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <div class=" col-2">
+                <label asp-for="Assets.TagNumber"> </label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Assets.TagNumber" class="form-control" />
+
+            </div>
+            <span asp-validation-for="Assets.TagNumber" class="text-danger"></span>
+        </div><div class="form-group row">
+            <div class=" col-2">
+                <label asp-for="Assets.Manufacturer"> </label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Assets.Manufacturer" class="form-control" />
+
+            </div>
+            <span asp-validation-for="Assets.Manufacturer" class="text-danger"></span>
+        </div><div class="form-group row">
+            <div class=" col-2">
+                <label asp-for="Assets.Description"> </label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Assets.Description" class="form-control" />
+
+            </div>
+            <span asp-validation-for="Assets.Description" class="text-danger"></span>
+        </div><div class="form-group row">
+            <div class=" col-2">
+                <label asp-for="Assets.SerialNumber"> </label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Assets.SerialNumber" class="form-control" />
+
+            </div>
+            <span asp-validation-for="Assets.SerialNumber" class="text-danger"></span>
+        </div>
+
+        <br />
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="Create" />
+            <a asp-action="Index" class="btn btn-success">Back to List</a>
+        </div>
+
+    </div>
+</form>
+
+@section Scripts{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

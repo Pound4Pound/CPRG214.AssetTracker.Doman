@@ -1,0 +1,68 @@
+﻿@model IEnumerable<CPRG214.OfficeAssets.WebInterface.Models.Assets>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<br /> <br />
+
+<div class="row">
+    <div class="col-6">
+        <h2 class="text-info">Asset List</h2>
+    </div>
+
+    <div class="col-6 text-right">
+        <a asp-action="Create" class="btn btn-info"><i class="fas fa-plus"></i> New Asset</a>
+    </div>
+
+    <br />
+    <div>
+        <table class="table table-striped border">
+            <tr class="table-info">
+                <th>
+                    @Html.DisplayNameFor(m => m.TagNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.Manufacturer)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.SerialNumber)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(m => m.AssetTypes)
+                </th>
+                <th></th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => item.AssetTypes.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.TagNumber)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Manufacturer)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(m => item.SerialNumber)
+                </td>
+
+                <td>
+                    <partial name="_TableButtonPartial" model="item.Id" />
+                </td>
+            </tr>
+            }
+        </table>
+    </div>
+
+</div>
+

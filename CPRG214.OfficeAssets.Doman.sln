@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.489
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CPRG214.OfficeAssets.WebInterface", "..\..\repos\CPRG214.OfficeAssets\CPRG214.OfficeAssets.WebInterface\CPRG214.OfficeAssets.WebInterface.csproj", "{32914375-D3A9-4448-B222-B6911B8CC066}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32914375-D3A9-4448-B222-B6911B8CC066}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32914375-D3A9-4448-B222-B6911B8CC066}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32914375-D3A9-4448-B222-B6911B8CC066}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32914375-D3A9-4448-B222-B6911B8CC066}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5220D13D-80CD-4439-AF25-D50589A37E27}
+	EndGlobalSection
+EndGlobal
